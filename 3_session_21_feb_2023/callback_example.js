@@ -15,13 +15,13 @@ const asyncFileData = fs.readFile('inputFile2.txt', function (error, data) {
 
 console.log('line 17');
 
+// writeFile
 const writeAFile = fs.writeFile(
   'writeFile.txt',
   'i am write a node js',
-  function (error, data) {
+  function (error) {
     if (error) {
-      return error;
+      console.log(error);
     }
-    console.log('writeFileData: ', data);
   }
 );
