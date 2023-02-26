@@ -56,3 +56,7 @@ console.log(os.cpus());
 
 // luxon module
 const luxon = require('luxon');
+
+const date = require('./customModule.js');
+
+console.log("date: ",date);
