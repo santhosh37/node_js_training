@@ -1,6 +1,6 @@
 const http = require('http');
 const port = 8080;
-const { getUrl } = require('utils');
+const { getUrl } = require('./utils');
 
 http
   .createServer(function (request, response) {
@@ -10,9 +10,25 @@ http
 
     console.log(url);
 
-    if (request.url === '/file1') {
+
+    // switch approch
+    switch (url) {
+      case 'file1':
+        //do something
+        break;
+
+      case 'file2':
+        //do something
+        break;
+
+      default:
+      // do something else
+    }
+
+    // if approch
+    if (url === '/file1') {
       // do somthing
-    } else if (request.url === '/file2') {
+    } else if (url === '/file2') {
       // do somthing
     } else {
       // else throw error
